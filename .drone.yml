@@ -22,3 +22,6 @@ steps:
     when:
       event: push
       branch: main
+
+image_pull_secrets:
+- dockerconfigjson

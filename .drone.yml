@@ -24,19 +24,17 @@ steps:
       event: push
       branch: main
 
-   - name: deploy
-   steps:
-- name: deploy
-  image: harbor.laecloud.com/test/test
-  settings:
-    kubernetes_server: https://192.168.81.150:6443
-    kubernetes_token: 
-      from_secret: k8s_token
-    namespace: test
-    deployment: my-deployment
-    repo: harbor.laecloud.com/test/test
-    container: my-container
-    tag: latest
+  - name: deploy
+    image: harbor.laecloud.com/test/test
+    settings:
+      kubernetes_server: https://192.168.81.150:6443
+      kubernetes_token: 
+        from_secret: k8s_token
+      namespace: test
+      deployment: my-deployment
+      repo: harbor.laecloud.com/test/test
+      container: my-container
+      tag: latest
 
 image_pull_secrets:
 - dockerconfigjson

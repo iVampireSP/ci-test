@@ -1,6 +1,7 @@
 kind: pipeline
 type: kubernetes
-name: drone
+name: default
+namespace: drone
 
 steps:
   - name: linter

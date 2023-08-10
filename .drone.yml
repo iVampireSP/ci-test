@@ -11,6 +11,7 @@ steps:
   - name: docker
     image: plugins/docker
     settings:
+      registry: harbor.laecloud.com
       repo: harbor.laecloud.com/test/test
       use_cache: true
       username:
